@@ -12,14 +12,22 @@ var Body = React.createClass({
     this.setState({ jobs: newState})
   },
 
-  handleDelete() {
+  handleDelete(id) {
     $.ajax({
       url: '/api/v1/jobs/${id}',
       type: 'DELETE',
-      success(response) {
-        console.log('Successfully removed job')
+      success:() => {
+        this.removeItemClient(id);
       }
     });
+  },
+
+  removeJobClient(id) {
+    var newJobs = this.state.jobs.filter((job) => {
+      return job.id != id;
+    });
+
+    this.setState({ jobs: newJobs });
   },
 
   render() {
