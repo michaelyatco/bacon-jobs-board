@@ -7,7 +7,7 @@ var NewJob = React.createClass({
     var jobtype= this.refs.jobtype.value;
     var price = this.refs.price.value;
     $.ajax({
-      url: '/api/v1/jobs',
+      url: `/api/v1/jobs`,
       type: 'POST',
       data: { job: { title: title, company: company, location: location, description: description, jobtype:jobtype, price: price} },
       success: (job) => {

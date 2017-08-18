@@ -8,7 +8,7 @@ var AllJobs = React.createClass({
   },
 
   render() {
-    var jobs= this.props.jobs.map((job) => {
+    var jobs = this.props.jobs.map((job) => {
       return (
         <div key={job.id}>
           <Job job={job}

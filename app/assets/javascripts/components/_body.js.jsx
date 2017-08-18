@@ -8,16 +8,16 @@ var Body = React.createClass({
   },
 
   handleSubmit(job) {
-    var newJob = this.state.jobs.concat(job);
+    var newState = this.state.jobs.concat(job);
     this.setState({ jobs: newState})
   },
 
   handleDelete(id) {
     $.ajax({
-      url: '/api/v1/jobs/${id}',
+      url: `/api/v1/jobs/${id}`,
       type: 'DELETE',
       success: () => {
-        this.removeItemClient(id);
+        this.removeJobClient(id);
       }
     });
   },
@@ -31,19 +31,21 @@ var Body = React.createClass({
   },
 
   handleUpdate(job) {
-    $ajax({
-      url: '/1pi/v1/jobs/${job.id}',
+    $.ajax({
+      url: `/api/v1/jobs/${job.id}`,
       type: 'PUT',
       data: { job: job },
       success: () => {
         this.updateJobs(job);
       }
-    }
-  )},
+    });
+  },
 
     updateJobs(job) {
-      var jobs = this.state.jobs.filter((i) => { return i.id != job.id })
+      var jobs = this.state.jobs.filter((i) => { return i.id != job.id });
       jobs.push(job);
+
+      this.setState({jobs: jobs});
     },
 
   render() {
