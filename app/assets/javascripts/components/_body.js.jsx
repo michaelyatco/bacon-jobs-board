@@ -13,7 +13,13 @@ var Body = React.createClass({
   },
 
   handleDelete() {
-    console.log('in handle delete')
+    $.ajax({
+      url: '/api/v1/jobs/${id}',
+      type: 'DELETE',
+      success(response) {
+        console.log('Successfully removed job')
+      }
+    });
   },
 
   render() {
