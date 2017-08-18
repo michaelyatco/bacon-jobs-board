@@ -16,7 +16,7 @@ var Body = React.createClass({
     $.ajax({
       url: '/api/v1/jobs/${id}',
       type: 'DELETE',
-      success:() => {
+      success: () => {
         this.removeItemClient(id);
       }
     });
@@ -30,11 +30,27 @@ var Body = React.createClass({
     this.setState({ jobs: newJobs });
   },
 
+  handleUpdate(job) {
+    $ajax({
+      url: '/1pi/v1/jobs/${job.id}',
+      type: 'PUT',
+      data: { job: job },
+      success: () => {
+        this.updateJobs(job);
+      }
+    }
+  )},
+
+    updateJobs(job) {
+      var jobs = this.state.jobs.filter((i) => { return i.id != job.id })
+      jobs.push(job);
+    },
+
   render() {
     return (
       <div>
         <NewJob handleSubmit={this.handleSubmit}/>
-        <AllJobs jobs={this.state.jobs} handleDelete={this.handleDelete}/>
+        <AllJobs jobs={this.state.jobs} handleDelete={this.handleDelete} onUpdate={this.handleUpdate}/>
       </div>
     )
   }

@@ -1,5 +1,8 @@
 {
   "name": "bacon-jobs-board",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  }
 }
