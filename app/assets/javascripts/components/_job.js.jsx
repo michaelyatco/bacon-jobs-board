@@ -6,11 +6,11 @@ var Job = React.createClass({
   handleEdit() {
     if (this.state.editable) {
       var id = this.props.job.id;
-      var title = this.props.job.title;
-      var company = this.props.job.company;
-      var location = this.props.job.location;
-      var jobtype = this.props.job.jobtype;
-      var price = this.props.job.price;
+      var title = this.refs.job.title;
+      var company = this.refs.job.company;
+      var location = this.refs.job.location;
+      var jobtype = this.refs.job.jobtype;
+      var price = this.refs.job.price;
       var job = { id: id, title: title, company: company, location: location, description: description, jobtype:jobtype, price: price }
       this.props.handleUpdate(job);
     }
@@ -18,12 +18,12 @@ var Job = React.createClass({
   },
 
   render() {
-    var title = this.state.editable ? <input type='text' defaultValue={this.props.job.title} /> : <h3>({this.props.job.id} {this.props.job.title}) </h3>
-    var company = this.state.editable ? <input type='text' defaultValue={this.props.job.company} /> : <p>{this.props.job.company} </p>
-    var location = this.state.editable ? <input type='text' defaultValue={this.props.job.location} /> : <p>{this.props.job.location} </p>
-    var description = this.state.editable ? <input type='text' defaultValue={this.props.job.description} /> : <p>{this.props.job.description} </p>
-    var jobtype= this.state.editable ? <input type='text' defaultValue={this.props.job.jobtype} /> : <p>{this.props.job.jobtype} </p>
-    var price = this.state.editable ? <input type='text' defaultValue={this.props.job.price} /> : <p>{this.props.job.price} </p>
+    var title = this.state.editable ? <input type='text' ref='title' defaultValue={this.props.job.title} /> : <h3>({this.props.job.id} {this.props.job.title}) </h3>
+    var company = this.state.editable ? <input type='text' ref='company' defaultValue={this.props.job.company} /> : <p>{this.props.job.company} </p>
+    var location = this.state.editable ? <input type='text' ref='location' defaultValue={this.props.job.location} /> : <p>{this.props.job.location} </p>
+    var description = this.state.editable ? <input type='text' ref='description' defaultValue={this.props.job.description} /> : <p>{this.props.job.description} </p>
+    var jobtype= this.state.editable ? <input type='text' ref='jobtype' defaultValue={this.props.job.jobtype} /> : <p>{this.props.job.jobtype} </p>
+    var price = this.state.editable ? <input type='text' ref='price' defaultValue={this.props.job.price} /> : <p>{this.props.job.price} </p>
 
     return (
       <div>

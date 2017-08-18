@@ -12,7 +12,7 @@ var AllJobs = React.createClass({
       return (
         <div key={job.id}>
           <Job job={job}
-            handleDelete={this.handleDelete.bind(this.item.id)}
+            handleDelete={this.handleDelete.bind(this, job.id)}
             handleUpdate={this.onUpdate} />
         </div>
       )
