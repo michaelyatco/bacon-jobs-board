@@ -4,14 +4,14 @@ var NewJob = React.createClass({
     var company = this.refs.company.value;
     var location = this.refs.location.value;
     var description = this.refs.description.value;
-    var jobtype= = this.refs.jobtype.value;
+    var jobtype= this.refs.jobtype.value;
     var price = this.refs.price.value;
     $.ajax({
       url: '/api/v1/jobs',
       type: 'POST',
-      data: { job: { title, company, location, description, jobtype, price} },
-      success: (response) => {
-        console.log('Great Success! You earned the bacon!', reponse);
+      data: { job: { title: title, company: company, location: location, description: description, jobtype:jobtype, price: price} },
+      success: (job) => {
+        this.props.handleSubmit(job);
       }
     });
   },
