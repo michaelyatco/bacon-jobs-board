@@ -12,11 +12,15 @@ var Body = React.createClass({
     this.setState({ jobs: newState})
   },
 
+  handleDelete() {
+    console.log('in handle delete')
+  },
+
   render() {
     return (
       <div>
         <NewJob handleSubmit={this.handleSubmit}/>
-        <AllJobs jobs={this.state.jobs} />
+        <AllJobs jobs={this.state.jobs} handleDelete={this.handleDelete}/>
       </div>
     )
   }
