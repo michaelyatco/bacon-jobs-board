@@ -10,7 +10,7 @@ var AllJobs = React.createClass({
   render() {
     var jobs = this.props.jobs.map((job) => {
       return (
-        <div key={job.id}>
+        <div key={job.id} className="Listing">
           <Job job={job}
             handleDelete={this.handleDelete.bind(this, job.id)}
             handleUpdate={this.onUpdate} />

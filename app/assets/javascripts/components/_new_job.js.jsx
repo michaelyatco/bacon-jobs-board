@@ -19,13 +19,13 @@ var NewJob = React.createClass({
   render() {
     return (
       <div>
-        <input ref='title' placeholder='Enter job title here' />
-        <input ref='company' placeholder='Enter company name here' />
-        <input ref='location' placeholder='Enter job location here' />
-        <input ref='description' placeholder='Enter job description here' />
-        <input ref='jobtype' placeholder='Enter job type here' />
-        <input ref='price' placeholder='Enter price here' />
-          <button onClick={this.handleClick}>Submit</button>
+        <p><input ref='title' placeholder='Enter job title here' /></p>
+        <p><input ref='company' placeholder='Enter company name here' /></p>
+        <p><input ref='location' placeholder='Enter job location here' /></p>
+        <p><input ref='description' placeholder='Enter job description here' /></p>
+        <p><input ref='jobtype' placeholder='Enter job type here' /></p>
+        <p><input ref='price' placeholder='Enter price here' /></p>
+        <p><button onClick={this.handleClick}>Submit</button></p>
       </div>
     )
   }

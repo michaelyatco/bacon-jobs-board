@@ -1,0 +1,71 @@
+h1, h3 {
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+  color: #F05E5D;
+  padding-bottom: 2px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+p {
+  font-family: "Nunito", sans-serif;
+}
+
+button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #F05E5D;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  -webkit-transition: background-color .5s ease-out;
+  -moz-transition: background-color .5s ease-out;
+  -o-transition: background-color .5s ease-out;
+  transition: background-color .5s ease-out;
+}
+
+button:hover {background-color: #8c3535}
+
+button:active {
+  background-color: #8c3535;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+input {
+  display: block;
+  margin: 0;
+  width: 100%;
+  font-family: sans-serif;
+  font-size: 18px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+}
+
+.Input {
+  width: 100%;
+}
+
+.Listing {
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+  position: relative;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-transition: background-color 1s ease-out;
+  -moz-transition: background-color 1s ease-out;
+  -o-transition: background-color 1s ease-out;
+  transition: background-color 1s ease-out;
+}
+
+.Listing:hover {
+  background-color: #F3F9E8  ;
+}
