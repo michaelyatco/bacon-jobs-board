@@ -20,7 +20,7 @@ var Job = React.createClass({
 
   render() {
     var title = this.state.editable ? <input type='text' ref='title' defaultValue={this.props.job.title} /> : <h3>{this.props.job.title}</h3>
-    var company = this.state.editable ? <input type='text' ref='company' defaultValue={this.props.job.company} /> : <p>{this.props.job.company} </p>
+    var company = this.state.editable ? <input type='text' ref='company' defaultValue={this.props.job.company} /> : <h4>{this.props.job.company} </h4>
     var location = this.state.editable ? <input type='text' ref='location' defaultValue={this.props.job.location} /> : <p>{this.props.job.location} </p>
     var description = this.state.editable ? <input type='text' ref='description' defaultValue={this.props.job.description} /> : <p>{this.props.job.description} </p>
     var jobtype= this.state.editable ? <input type='text' ref='jobtype' defaultValue={this.props.job.jobtype} />: <p>{this.props.job.jobtype} </p>
