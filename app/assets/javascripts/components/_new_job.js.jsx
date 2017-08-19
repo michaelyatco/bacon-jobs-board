@@ -9,7 +9,7 @@ var NewJob = React.createClass({
     $.ajax({
       url: `/api/v1/jobs`,
       type: 'POST',
-      data: { job: { title: title, company: company, location: location, description: description, jobtype:jobtype, price: price} },
+      data: { job: { title: title, company: company, location: location, description: description, jobtype: jobtype, price: price} },
       success: (job) => {
         this.props.handleSubmit(job);
       }

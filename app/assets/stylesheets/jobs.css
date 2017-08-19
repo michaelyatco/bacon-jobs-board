@@ -11,12 +11,14 @@ h3 {
 
 p {
   font-family: "Nunito", sans-serif;
+  font-size: 18px;
 }
 
 button {
+  margin-right: 15px;
   display: inline-block;
-  padding: 15px 25px;
-  font-size: 24px;
+  padding: 10px 15px;
+  font-size: 18px;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
@@ -49,10 +51,6 @@ input {
   appearance: none;
   box-shadow: none;
   border-radius: none;
-}
-
-.Input {
-  width: 100%;
 }
 
 .Listing {

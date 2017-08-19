@@ -34,9 +34,11 @@ var Job = React.createClass({
         {description}
         {jobtype}
         {price}
-        <p><button onClick={this.handleEdit}> {this.state.editable ? 'Submit' : 'Edit'} </button></p>
-        <p><button onClick={this.props.handleDelete}> Delete </button></p>
+        <button onClick={this.handleEdit}> {this.state.editable ? 'Submit' : 'Edit'} </button>
+        <button onClick={this.props.handleDelete}> Delete </button>
       </div>
     )
   }
 });
+
+
