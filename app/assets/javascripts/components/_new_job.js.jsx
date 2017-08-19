@@ -14,6 +14,11 @@ var NewJob = React.createClass({
         this.props.handleSubmit(job);
       }
     });
+    ReactDOM.findDOMNode(this.refs.title).value = ""
+    ReactDOM.findDOMNode(this.refs.company).value = ""
+    ReactDOM.findDOMNode(this.refs.location).value = ""
+    ReactDOM.findDOMNode(this.refs.description).value = ""
+    ReactDOM.findDOMNode(this.refs.jobtype).value = "";
   },
 
   render() {

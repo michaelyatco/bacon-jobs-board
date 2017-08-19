@@ -1,4 +1,6 @@
 development:
+
+  host: localhost
   adapter: postgresql
   encoding: utf8
   database: bacon_jobs_board_development
@@ -6,6 +8,7 @@ development:
   timeout: 5000
 
 test: &TEST
+  host: localhost
   adapter: postgresql
   encoding: utf8
   database: bacon_jobs_board_test
