@@ -13,5 +13,5 @@ A stripped-down jobs posting index page where a user can add, edit, and delete j
 * React on Rails
 * Heroku
 
-## Future integrations
+## Future Integrations
 * Google Maps API
