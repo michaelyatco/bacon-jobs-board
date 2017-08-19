@@ -11,8 +11,8 @@ var Job = React.createClass({
       var location = this.refs.location.value;
       var description = this.refs.description.value;
       var jobtype = this.refs.jobtype.value;
-      var price = this.refs.price.value;
-      var job = { id: id, title: title, company: company, location: location, description: description, jobtype:jobtype, price: price }
+      // var price = this.refs.price.value;
+      var job = { id: id, title: title, company: company, location: location, description: description, jobtype:jobtype }
       this.props.handleUpdate(job);
     }
     this.setState({editable: !this.state.editable})
@@ -24,7 +24,7 @@ var Job = React.createClass({
     var location = this.state.editable ? <input type='text' ref='location' defaultValue={this.props.job.location} /> : <p>{this.props.job.location} </p>
     var description = this.state.editable ? <input type='text' ref='description' defaultValue={this.props.job.description} /> : <p>{this.props.job.description} </p>
     var jobtype= this.state.editable ? <input type='text' ref='jobtype' defaultValue={this.props.job.jobtype} />: <p>{this.props.job.jobtype} </p>
-    var price = this.state.editable ? <input type='text' ref='price' defaultValue={this.props.job.price} /> : <p>{this.props.job.price} </p>
+    // var price = this.state.editable ? <input type='text' ref='price' defaultValue={this.props.job.price} /> : <p>{this.props.job.price} </p>
 
     return (
       <div>
@@ -33,7 +33,6 @@ var Job = React.createClass({
         {location}
         {description}
         {jobtype}
-        {price}
         <button onClick={this.handleEdit}> {this.state.editable ? 'Submit' : 'Edit'} </button>
         <button onClick={this.props.handleDelete}> Delete </button>
       </div>
