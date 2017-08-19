@@ -1,24 +1,17 @@
-# README
+# Bacon Jobs Board App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A stripped-down jobs posting index page where a user can add, edit, and delete job postings.
 
-Things you may want to cover:
+## Purpose
 
-* Ruby version
+* Demonstrating Rails, React, JavaScript, HTML, and CSS integration
+* Practing RESTful API design
+* Parsing a JSON response
+* Inputting user responses instataneously without page refreshes
 
-* System dependencies
+## Built With
+* React on Rails
+* Heroku
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Future integrations
+* Google Maps API
